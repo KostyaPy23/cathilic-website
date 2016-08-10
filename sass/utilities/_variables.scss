@@ -22,11 +22,15 @@ $youtube: #e62117;
 $google: #ff3d00;
 
 // Font
-$body-font-family: "Roboto", sans-serif;
+$proxima-light: "ProximaNovaCond-Light", sans-serif;
+$proxima-regular: "ProximaNova-Regular", sans-serif;
+$proxima-bold: "ProximaNova-Bold", sans-serif;
+
+$body-font-family: $proxima-regular;
 $font-extra-bold: 900;
 $font-bold: 700;
 $font-regular: 400;
 $font-light: 300;
 
-//$fontello: "fontello";
+$fontello: "fontello";
 
