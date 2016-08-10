@@ -1,0 +1,169 @@
+$submenu-padding: 17px;
+
+// Clearfix for floats
+%clearfix {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+.nav-bg {
+    background: $main-color;
+}
+
+.menu {
+    @extend %clearfix;
+    display: block;
+    background: $main-color;
+}
+
+.menu-main {
+    & > .nav-item {
+        position: relative;
+        float: left;
+        font-weight: $font-bold;
+        padding: 0 15px 0 10px;
+        transition: all .35s;
+        &:first-child { padding: 0 18px; }
+        & > .nav-item-link {
+            position: relative;
+            display: block;
+            padding: 18px 0;
+            font-size: 14px;
+            color: $white;
+            text-transform: uppercase;
+        }
+        &:hover > .nav-item-link,
+        &.current > .nav-item-link { color: $main-text-color; }
+    }
+
+    .nav-item {
+        position: relative;
+        &.has-sub {
+            &:before {
+                position: absolute;
+                top: 50%;
+                right: 3px;
+                font-family: $fontello;
+                font-size: 9px;
+                color: $white;
+                content: '\e802';
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+            }
+            @media screen and (max-width: 768px) {
+                &:before {
+                    top: 20px;
+                    right: 10px;
+                    -webkit-transform: translateY(0);
+                    transform: translateY(0);
+                }
+            }
+        }
+        @media screen and (min-width: 768px) {
+            &:hover > .menu-sub {
+                @include showSubmenu;
+            }
+        }
+    }
+}
+// Submenu
+.menu-sub {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 10;
+    min-width: 205px;
+    padding: $submenu-padding 0 $submenu-padding;
+    background: $main-color;
+    border-top: 3px solid $white;
+    -webkit-transform: translateY(10px);
+    transform: translateY(10px);
+    transition: all .35s;
+    .nav-item {
+        .nav-item-link {
+            display: block;
+            color: $white;
+            padding: 6px 17px;
+            transition: all .35s;
+            @media screen and (max-width: 768px) {
+                padding: 6px 17px 6px 37px;
+            }
+        }
+        &:hover > .nav-item-link,
+        &.current > .nav-item-link {
+            background-color: $main-color-darker;
+        }
+    }
+
+    // Third level and so on menu displaying
+    .menu-sub {
+        border-top: none;
+        left: 100%;
+        top: -$submenu-padding;
+    }
+}
+
+// Mobile menu
+.mobile-menu-icon {
+    width: 30px;
+    height: 30px;
+    background: $white;
+    font-size: 30px;
+    color: $main-color;
+    text-align: center;
+    cursor: pointer;
+    &:before {
+        width: auto;
+        height: auto;
+        vertical-align: top;
+        margin: auto;
+        line-height: 30px;
+    }
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-main {
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: auto;
+        & > .nav-item {
+            float: none;
+            display: block;
+            z-index: 10;
+            margin-right: 0!important;
+            background: $main-color;
+            & > .nav-item-link {
+                padding: 10px;
+            }
+        }
+    }
+
+    .menu-sub {
+        border-top: none;
+        display: none;
+        visibility: visible;
+        opacity: 1;
+        position: relative;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        transition: none;
+        .menu-sub {
+            padding-left: 20px;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+
