@@ -3,37 +3,3 @@
 
 
 
-//.back-to-top {
-//    position: fixed;
-//    bottom: 332px;
-//    right: 56px;
-//    z-index: 9999;
-//    width: 50px;
-//    height: 50px;
-//    font-family: $fontello;
-//    font-size: 30px;
-//    text-align: center;
-//    line-height: 52px;
-//    background: $back-top-bg;
-//    color: $back-top-icon;
-//    cursor: pointer;
-//    border: 0;
-//    text-decoration: none;
-//    opacity: 0;
-//    visibility: hidden;
-//    transition: all .3s;
-//    &:after {
-//        position: absolute;
-//        left: 0;
-//        right: 0;
-//        content: '\e803';
-//    }
-//    &:hover {
-//        background: $main-color;
-//        color: $white;
-//    }
-//    &.show {
-//        opacity: 1;
-//        visibility: visible;
-//    }
-//}
