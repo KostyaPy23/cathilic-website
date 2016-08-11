@@ -1,14 +1,4 @@
 @font-face {
-    font-family: 'ProximaNova-Bold';
-    src: url('../ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonst/ProximaNova-Bold.otf')  format('opentype'),
-    url('../ProximaNova-Bold.woff') format('woff'),
-    url('../ProximaNova-Bold.ttf')  format('truetype'),
-    url('../ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
     font-family: 'ProximaNovaCond-Light';
     src: url('../ProximaNovaCond-Light.eot?#iefix') format('embedded-opentype'),
     url('../ProximaNovaCond-Light.otf')  format('opentype'),
@@ -25,6 +15,26 @@
     url('../ProximaNova-Regular.woff') format('woff'),
     url('../ProximaNova-Regular.ttf')  format('truetype'),
     url('../ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Bold';
+    src: url('../ProximaNova-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonst/ProximaNova-Bold.otf')  format('opentype'),
+    url('../ProximaNova-Bold.woff') format('woff'),
+    url('../ProximaNova-Bold.ttf')  format('truetype'),
+    url('../ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNova-Extrabld';
+    src: url('../ProximaNova-Extrabld.eot?#iefix') format('embedded-opentype'),
+    url('../ProximaNova-Extrabld.otf')  format('opentype'),
+    url('../ProximaNova-Extrabld.woff') format('woff'),
+    url('../ProximaNova-Extrabld.ttf')  format('truetype'),
+    url('../ProximaNova-Extrabld.svg#ProximaNova-Extrabld') format('svg');
     font-weight: normal;
     font-style: normal;
 }

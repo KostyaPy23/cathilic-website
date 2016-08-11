@@ -1,6 +1,8 @@
 $header-bg: #250e38;
+$header-border-color: #a48326;
 
 .header {
-    padding: rem-calc(15px 0);
+    //padding: rem-calc(15px 0);
     background-color: $header-bg;
+    border-bottom: 7px solid $header-border-color;
 }

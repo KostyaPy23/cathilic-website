@@ -1,5 +1,11 @@
 $submenu-padding: 17px;
 $primary-menu-font-size: 18px;
+$hover-item-color-bg: #beb7c4;
+$hove-item-color: #2a2647;
+$submenu-bg: #fff;
+$submenu-item-color: #2a2647;
+$submenu-item-color-hover: #fff;
+$submenu-item-bg-color-hover: #2a2647;
 
 // Clearfix for floats
 %clearfix {
@@ -20,7 +26,6 @@ $primary-menu-font-size: 18px;
 
 .primary-menu {
     float: right;
-    //padding: rem-calc(16 0);
     & > .menu-item {
         position: relative;
         float: left;
@@ -29,12 +34,16 @@ $primary-menu-font-size: 18px;
         & > a {
             position: relative;
             display: block;
-            padding: rem-calc(15);
+            padding: rem-calc(45 17);
             font-size: $primary-menu-font-size;
             color: $white;
+            transition: all .35s ease-in-out;
         }
         &:hover > a,
-        &.current-menu-item > a { color: $main-text-color; }
+        &.current-menu-item > a {
+            color: $hove-item-color;
+            background-color: $hover-item-color-bg;
+        }
     }
 
     .menu-item {
@@ -73,34 +82,44 @@ $primary-menu-font-size: 18px;
 // Submenu
 .sub-menu {
     position: absolute;
+    margin-top: rem-calc(7);
     visibility: hidden;
     opacity: 0;
     z-index: 10;
-    min-width: 205px;
+    min-width: 200px;
     padding: $submenu-padding 0 $submenu-padding;
-    background: $main-color;
-    border-top: 3px solid $white;
+    background: $submenu-bg;
+    -webkit-box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
+    box-shadow: 0px 3px 12px -2px rgba(0,0,0,0.75);
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
     transition: all .35s;
+    &:before {
+        position: absolute;
+        top: -7px;
+        left: 0;
+        width: 100%;
+        height: 7px;
+        background: transparent;
+        content: "";
+    }
     .menu-item {
         a {
             display: block;
-            color: $white;
-            padding: 6px 17px;
+            color: $submenu-item-color;
+            padding: rem-calc(7 20);
             transition: all .35s;
-            @media screen and (max-width: 768px) {
-                padding: 6px 17px 6px 37px;
-            }
         }
         &:hover > a,
         &.current-menu-item > a {
-            background-color: $main-color-darker;
+            background-color: $submenu-item-bg-color-hover;
+            color: $submenu-item-color-hover;
         }
     }
 
     // Third level and so on menu displaying
     .sub-menu {
+        margin-top: 0;
         border-top: none;
         left: 100%;
         top: -$submenu-padding;

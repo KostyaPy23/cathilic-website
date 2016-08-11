@@ -12,6 +12,9 @@
     <!-- Stylesheets -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 </head>
 <body>
 <header class="header" id="header">
@@ -30,7 +33,7 @@
                         <ul class="primary-menu">
                             <li class="menu-item  current-menu-ancestor menu-item-has-children">
                                 <a href="#">
-                                    Hello world!
+                                    Home
                                 </a>
                                 <ul class="sub-menu toggled-on">
                                     <li class="menu-item current-menu-ancestor current-menu-parent menu-item-has-children">
@@ -50,21 +53,143 @@
                             </li>
                             <li class="menu-item">
                                 <a href="#">
-                                    Uncategorized
+                                    About
                                 </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Articles</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Contact</a>
                             </li>
                         </ul>
                     </div>
-                </nav>
-                <!-- .main-navigation -->
+                </nav><!-- .main-navigation -->
+
+                <!-- Search  -->
+                <!--<div class="search-wrapper" style="width: 0px; padding-right: 35px;">-->
+                    <!--<form method="post" action="/">-->
+                        <!--<p>-->
+                            <!--<input name="s" id="s" type="text">-->
+                            <!--<a href="#" class="submit-search">Search</a>-->
+                        <!--</p>-->
+                    <!--</form>-->
+                <!--</div>-->
+
             </div>
         </div>
     </div>
 </header>
 <!-- /header -->
-<main role="main">
-</main>
+<div class="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <aside id="secondary" class="sidebar widget-area">
+                    <section class="sidebar-nav">
+                        <!--<h3 class="sidebar-nav-title">Region</h3>-->
+                        <div class="select-wrapper" data-title="Region">
+                            <select name="region" id="region" class="dropdown-menu cs-select cs-skin-elastic">
+                                <option value="" disabled selected>Choose Ebook</option>
+                                <option value="1">sdsd</option>
+                                <option value="2">sdsd</option>
+                                <option value="3">sdsd</option>
+                                <option value="4">sdsd</option>
+                                <option value="5">sdsd</option>
+                            </select>
+                        </div>
+                        <div class="region-map">
+                            <img src="images/region-map.jpg" alt="">
+                        </div>
+                    </section>
+
+                    <section>
+
+                        <article class="entry">
+
+                            <div class="post-holder">
+                                <h6 class="entry-title">
+                                    <a href="blog-single.html">This can be the title of the article on the homepage</a>
+                                </h6>
+                                <div class="entry-meta">
+                                    <span class="date"><a href="#">15.11.2013</a></span>
+                                </div><!--/ .entry-meta-->
+                            </div><!--/ .post-holder-->
+
+                        </article><!--/ .entry-->
+
+                        <article class="entry">
+
+                            <div class="entry-image">
+                                <a href="#">
+                                    <img alt="" src="images/sidebar-entry-image.jpg">
+                                </a>
+                            </div><!--/ .entry-image-->
+
+                            <div class="post-holder">
+                                <h6 class="entry-title">
+                                    <a href="blog-single.html">Pellentesque habitant morbi tristique</a>
+                                </h6>
+                                <div class="entry-meta">
+                                    <span class="date"><a href="#">15.11.2013</a></span>
+                                </div><!--/ .entry-meta-->
+                            </div><!--/ .post-holder-->
+
+                        </article><!--/ .entry-->
+
+                        <article class="entry">
+
+                            <div class="post-holder">
+                                <h6 class="entry-title">
+                                    <a href="blog-single.html">This can be the title of the article on the homepage</a>
+                                </h6>
+                                <div class="entry-meta">
+                                    <span class="date"><a href="#">15.11.2013</a></span>
+                                </div><!--/ .entry-meta-->
+                            </div><!--/ .post-holder-->
+
+                        </article><!--/ .entry-->
+                    </section>
+                </aside>
+            </div>
+            <div class="col-lg-8">
+                <main id="main" class="post-area" role="main">
+                    <article class="post">
+                        <div class="image-post">
+                            <a href="#">
+                                <img src="" alt="">
+                            </a>
+                        </div>
+                        <header class="entry-header">
+                            <h2 class="entry-title">This can be the main title of the article in the viewing window</h2>
+                            <div class="post-meta">
+
+                            </div>
+                        </header>
+                        <div class="entry-content">
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque molestie tempus est,
+                                a porta felis auctor id. Integer eget nisi ut nibh finibus viverra. Class aptent taciti
+                                sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat
+                                volutpat. Nunc blandit aliquet consectetur. Nam commodo, erat et scelerisque blandit,
+                                ante mi accumsan orci, at mollis enim lorem tristique mauris. Curabitur bibendum
+                                pharetra quam, quis aliquam risus iaculis at. Suspendisse ultricies molestie ultricies.
+                                Vestibulum rutrum, lorem fringilla tincidunt viverra, libero lectus eleifend neque,
+                                id volutpat est dolor nec nunc. turpis.
+                            </p>
+                            <a href="#" class="btn btn-more">Read more</a>
+                        </div>
+                    </article>
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
 <footer class="footer">
 </footer>
+
+<script src="js/classie.js"></script>
+<script src="js/selectFx.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
