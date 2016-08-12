@@ -1,4 +1,4 @@
-.content {
+.main-content {
     position: relative;
     &:before {
         position: absolute;
@@ -11,6 +11,64 @@
     }
 }
 
+$section-message-bg: #2a2647;
+.section-message {
+    padding: rem-calc(40 0 35);
+    background-color: $section-message-bg;
+}
 
+.section-text-wrap {
+    @extend %clearfix;
+    .section-text {
+        font-size: rem-calc(30);
+        font-weight: $font-bold;
+        color: $white;
+    }
+}
+
+
+.section-form {
+    background-color: #777;
+    padding: rem-calc(20 0);
+    background: url(../images/section-form-bg.jpg) 0 0 no-repeat;
+    .section-form-title {
+        margin-bottom: rem-calc(20);
+        font-size: rem-calc(48);
+        font-weight: $font-bold;
+        color: $white;
+        font-family: $proxima-bold;
+        text-align: center;
+    }
+    .form-wrapper {
+        max-width: rem-calc(655);
+        margin: 0 auto;
+        @media screen and (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+}
+
+.form-row {
+    margin-bottom: rem-calc(6);
+    @media screen and (max-width: 768px) {
+        margin-bottom: 0;
+    }
+    &.half {
+        .form-control {
+            width: rem-calc(320);
+            display: inline-block;
+             @media screen and (max-width: 768px) {
+                width: 100%;
+                margin-bottom: 6px;
+            }
+            & + .form-control { 
+                margin-left: 6px; 
+                @media screen and (max-width: 768px) {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
 
 

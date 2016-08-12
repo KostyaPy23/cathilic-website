@@ -1,3 +1,9 @@
+$btn-border-color: #32004b;
+$btn-text-color: #250e38;
+
+.left { float: left; }
+.right { float: right; }
+
 // Buttons
 .btn {
     display: inline-block;
@@ -10,7 +16,7 @@
     font-weight: $font-bold;
     color: $white;
     background: transparent;
-    border-radius: 5px;
+    border-radius: 4px;
     outline: none;
     border: none;
     -webkit-apperance: none;
@@ -18,12 +24,15 @@
     user-select: none;
     transition: all .35s;
     &.btn-default {
-        background-color: $secondary-color;
-        border-bottom: 3px solid $secondry-color-darker;
+        min-width: 324px;
+        background-color: transparent;
+        border: 1px solid $btn-border-color;
+        color: $btn-text-color;
     }
     &.btn-transparent {
+        min-width: 300px;
         background-color: transparent;
-        border: 2px solid $white;
+        border: 1px solid $white;
         &:hover {
             color: $main-color;
             background-color: $white;
@@ -45,37 +54,41 @@ a {
 .form-control {
     display: block;
     width: 100%;
-    margin-bottom: 5px;
-    height: 35px;
-    padding: 2px 10px;
-    border: 1px solid #000;
-    font-size: 14px;
-    color: #000;
+    height: 45px;
+    padding: 10px 10px;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 20px;
+    color: #848484;
+    background-color: #ececec;
     outline: none;
-    line-height: 26px;
-    border-radius: 5px;
+    line-height: 27px;
+    border-radius: none;
     -webkit-appearance: none;
     ::-webkit-input-placeholder {
-        color: #000;
+        color: #848484;
         //opacity: 1;
     }
     :-moz-placeholder {
-        color: #000;
+        color: #848484;
         //opacity: 1;
     }
     ::-moz-placeholder {
-        color: #000;
+        color: #848484;
         //opacity: 1;
     }
     :-ms-input-placeholder {
-        color: #000;
+        color: #848484;
         opacity: 1;
+    }
+
+    &.description {
+        height: 127px;
     }
 }
 
 
 // Search Block
-
 .search-wrapper {
     position: relative;
     overflow: hidden;

@@ -30,38 +30,24 @@
             <div class="col-lg-6">
                 <nav aria-label="Primary Menu" class="main-navigation" role="navigation">
                     <div class="menu">
+                        <div class="mobile-menu-icon icon-menu"></div>
                         <ul class="primary-menu">
                             <li class="menu-item  current-menu-ancestor menu-item-has-children">
-                                <a href="#">
-                                    Home
-                                </a>
+                                <a href="#">Home</a>
                                 <ul class="sub-menu toggled-on">
                                     <li class="menu-item current-menu-ancestor current-menu-parent menu-item-has-children">
-                                        <a href="#">
-                                            Hello world!
-                                        </a>
-
+                                        <a href="#">Hello world!</a>
                                         <ul class="sub-menu toggled-on">
                                             <li class="menu-item current-menu-item current_page_item">
-                                                <a href="#">
-                                                    Sample Page
-                                                </a>
+                                                <a href="#">Sample Page</a>
                                             </li>
                                         </ul>
                                     </li>
                                 </ul>
                             </li>
-                            <li class="menu-item">
-                                <a href="#">
-                                    About
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">Articles</a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="#">Contact</a>
-                            </li>
+                            <li class="menu-item"><a href="#">About</a></li>
+                            <li class="menu-item"><a href="#">Articles</a></li>
+                            <li class="menu-item"><a href="#">Contact</a></li>
                         </ul>
                     </div>
                 </nav><!-- .main-navigation -->
@@ -81,7 +67,8 @@
     </div>
 </header>
 <!-- /header -->
-<div class="content">
+
+<div class="main-content">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">
@@ -104,7 +91,6 @@
                     </section>
 
                     <section>
-
                         <article class="entry">
 
                             <div class="post-holder">
@@ -115,11 +101,9 @@
                                     <span class="date"><a href="#">15.11.2013</a></span>
                                 </div><!--/ .entry-meta-->
                             </div><!--/ .post-holder-->
-
                         </article><!--/ .entry-->
 
                         <article class="entry">
-
                             <div class="entry-image">
                                 <a href="#">
                                     <img alt="" src="images/sidebar-entry-image.jpg">
@@ -134,11 +118,9 @@
                                     <span class="date"><a href="#">15.11.2013</a></span>
                                 </div><!--/ .entry-meta-->
                             </div><!--/ .post-holder-->
-
                         </article><!--/ .entry-->
 
                         <article class="entry">
-
                             <div class="post-holder">
                                 <h6 class="entry-title">
                                     <a href="blog-single.html">This can be the title of the article on the homepage</a>
@@ -147,11 +129,11 @@
                                     <span class="date"><a href="#">15.11.2013</a></span>
                                 </div><!--/ .entry-meta-->
                             </div><!--/ .post-holder-->
-
                         </article><!--/ .entry-->
                     </section>
                 </aside>
             </div>
+
             <div class="col-lg-8">
                 <main id="main" class="post-area" role="main">
                     <article class="post">
@@ -163,7 +145,7 @@
                         <header class="entry-header">
                             <h2 class="entry-title">This can be the main title of the article in the viewing window</h2>
                             <div class="post-meta">
-
+                                <span class="entry-date">5/26/15</span>
                             </div>
                         </header>
                         <div class="entry-content">
@@ -177,15 +159,107 @@
                                 Vestibulum rutrum, lorem fringilla tincidunt viverra, libero lectus eleifend neque,
                                 id volutpat est dolor nec nunc. turpis.
                             </p>
-                            <a href="#" class="btn btn-more">Read more</a>
+                            <a href="#" class="btn btn-default">Read more</a>
+                            <div class="social-share">
+                                <ul>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </div>
                         </div>
                     </article>
+
                 </main>
             </div>
         </div>
     </div>
 </div>
+
+<section class="section-message">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <section class="section-text-wrap">
+                    <div class="section-text left" style="float: left; ">Want To Submit An Item to The Catholic Virginian?</div> 
+                    <a href="#" class="btn btn-transparent right" style="float: right;">Start Here</a>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="section-form-title">Submission</h2>
+                <div class="form-wrapper"> 
+                    <form action="#">
+                        <p class="form-row half">
+                            <input type="text" class="form-control name" name="name" placeholder="Name*">
+                            <input type="email" class="form-control email" name="Email" placeholder="Email*">
+                        </p>
+                        <p class="form-row half">
+                            <input type="number" class="form-control phone" name="phone-number" placeholder="Phone">
+                            <span class="select-wrapper form-control">
+                                <select name="category" id="category">
+                                    <option value="">Category*</option>
+                                    <option value="1">Category 1</option>
+                                    <option value="2">Category 2</option>
+                                    <option value="3">Category 3</option>
+                                </select>
+                            </span>
+                        </p>
+                        <p class="form-row">
+                            <input type="file" name="file-upload" class="form-control file" placeholder="File Upload">
+                        </p>
+                        <p class="form-row">
+                            <textarea name="description" id="description" class="form-control description"></textarea>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 <footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="footer-logo">
+                    <a href="#">
+                        <img src="images/logo-footer.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5">
+                <nav class="main-navigation" role="navigation">
+                    <div class="menu">
+                        <ul class="primary-menu">
+                            <li class="menu-item  current-menu-ancestor menu-item-has-children">
+                                <a href="#">Home</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">
+                                    About
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Articles</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav><!-- .main-navigation -->
+            </div>
+        </div>
+    </div>
 </footer>
 
 <script src="js/classie.js"></script>

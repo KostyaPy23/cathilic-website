@@ -7,18 +7,6 @@ $submenu-item-color: #2a2647;
 $submenu-item-color-hover: #fff;
 $submenu-item-bg-color-hover: #2a2647;
 
-// Clearfix for floats
-%clearfix {
-    &:before,
-    &:after {
-        display: table;
-        content: "";
-    }
-    &:after {
-        clear: both;
-    }
-}
-
 .menu {
     @extend %clearfix;
     display: block;
@@ -38,6 +26,7 @@ $submenu-item-bg-color-hover: #2a2647;
             font-size: $primary-menu-font-size;
             color: $white;
             transition: all .35s ease-in-out;
+            #{".footer"} & { padding: rem-calc(35 17); }
         }
         &:hover > a,
         &.current-menu-item > a {
@@ -128,11 +117,11 @@ $submenu-item-bg-color-hover: #2a2647;
 
 // Mobile menu
 .mobile-menu-icon {
-    width: 30px;
-    height: 30px;
-    background: $white;
-    font-size: 30px;
-    color: $main-color;
+    width: rem-calc(30);
+    height: rem-calc(30);
+    background: $main-color;
+    font-size: rem-calc(30);
+    color: $white;
     text-align: center;
     cursor: pointer;
     &:before {
@@ -141,6 +130,7 @@ $submenu-item-bg-color-hover: #2a2647;
         vertical-align: top;
         margin: auto;
         line-height: 30px;
+        content: "=";
     }
     @media screen and (min-width: 768px) {
         display: none;
@@ -148,12 +138,13 @@ $submenu-item-bg-color-hover: #2a2647;
 }
 
 @media screen and (max-width: 768px) {
-    .menu-main {
+    .primary-menu {
         display: none;
         position: absolute;
         left: 0;
         width: 100%;
         height: auto;
+        z-index: 999;
         & > .menu-item {
             float: none;
             display: block;
