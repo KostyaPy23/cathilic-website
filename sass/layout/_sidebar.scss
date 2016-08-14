@@ -1,9 +1,15 @@
 $entry-bg: #e5e5e5;
 $entry-title-color: #2a2647;
 $entry-meta-color: #ababab;
+
+.sidebar  {
+    max-width: rem-calc(345);
+    margin: 0 59px 0 auto;
+}
+
 .select-wrapper {
     position: relative;
-    background: #2a2647;
+    // background: #2a2647;
     &:before {
         position: absolute;
         top: 0;

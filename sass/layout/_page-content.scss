@@ -1,3 +1,16 @@
+$section-message-bg: #2a2647;
+
+.row {
+    &.padding-off {
+        margin-left: 0;
+        margin-right: 0;
+        div[class^="col"] {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
 .main-content {
     position: relative;
     &:before {
@@ -11,7 +24,6 @@
     }
 }
 
-$section-message-bg: #2a2647;
 .section-message {
     padding: rem-calc(40 0 35);
     background-color: $section-message-bg;
@@ -25,8 +37,6 @@ $section-message-bg: #2a2647;
         color: $white;
     }
 }
-
-
 .section-form {
     background-color: #777;
     padding: rem-calc(20 0);
@@ -40,7 +50,7 @@ $section-message-bg: #2a2647;
         text-align: center;
     }
     .form-wrapper {
-        max-width: rem-calc(655);
+        max-width: rem-calc(657);
         margin: 0 auto;
         @media screen and (max-width: 768px) {
             max-width: 100%;
@@ -50,19 +60,22 @@ $section-message-bg: #2a2647;
 
 .form-row {
     margin-bottom: rem-calc(6);
+    font-size: 0;
+    // overflow: hidden;
     @media screen and (max-width: 768px) {
         margin-bottom: 0;
     }
     &.half {
         .form-control {
-            width: rem-calc(320);
+            width: rem-calc(325);
             display: inline-block;
+            vertical-align: top;
              @media screen and (max-width: 768px) {
                 width: 100%;
                 margin-bottom: 6px;
             }
-            & + .form-control { 
-                margin-left: 6px; 
+            & + * { 
+                margin-left: 7px; 
                 @media screen and (max-width: 768px) {
                     margin-left: 0;
                 }
