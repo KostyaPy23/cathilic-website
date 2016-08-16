@@ -139,83 +139,47 @@ a {
 // Search Block
 .search-wrapper {
   position: relative;
-  overflow: hidden;
-  float: right;
-  padding-left: 0;
-  padding-right: 40px;
-  padding-top: 14px;
-  width: 0;
-  margin: 0;
-  -webkit-backface-visibility: hidden;
-  /*Fix for chrome*/
-  -webkit-transform: translateX(0);
-  /*Fix for chrome*/
-  p {
-    margin: 0;
-  }
+  margin: rem-calc(40 0);
+  text-align: right;
+  p { margin: 0; }
   input[type="text"] {
-    width: 100%;
+    width: 0;
     height: 35px;
     padding: 8px 3px;
     font-size: 12px;
     outline: none;
+    display: none;
   }
   .submit-search {
-    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
     z-index: 3;
-    top: 11px;
     right: 0;
-    width: 40px;
-    height: 38px;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
     font: 0/0 a;
     border: none;
-    background: $main-color;
+    background: $white;
     transition: all .35s;
     &:after {
-      content: '\e806';
+      content: '\e802';
       position: absolute;
       top: 0;
+      left: 0;
       z-index: 4;
       width: 100%;
       height: 100%;
-      font-size: 17px;
+      font-size: rem-calc(30);
       font-family: 'fontello';
       line-height: 35px;
-      text-align: center;
-      color: $white;
-      opacity: .7;
+      color: #250e38;
       transition: all .35s;
-    }
-    &:hover:after {
-      opacity: 1;
     }
   }
 }
-
-// Breadcrumbs
-//.breadcrumbs {
-//    margin-left: 17px;
-//    li {
-//        position: relative;
-//        display: inline-block;
-//        margin-right: 15px;
-//        color: $white;
-//        font-size: 14px;
-//        font-weight: $font-light;
-//        a:hover { text-decoration: underline; color: inherit; }
-//        & + li {
-//            &:before {
-//                position: absolute;
-//                top: -3px;
-//                left: -10px;
-//                color: inherit;
-//                font-size: 16px;
-//                content: "/";
-//            }
-//        }
-//    }
-//}
-
 
 // Social Icons
 $soc-icon-size: 37;
