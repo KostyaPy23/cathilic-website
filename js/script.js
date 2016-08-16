@@ -42,15 +42,8 @@
             }, 700);
         });
     }
-
-
-	
 })(jQuery);
 
-
- 
-
-    
 
 (function() {
     [].slice.call( document.querySelectorAll( 'select.cs-select' ) ).forEach( function(el) {
