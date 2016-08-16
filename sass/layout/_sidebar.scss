@@ -1,6 +1,7 @@
 $entry-bg: #e5e5e5;
 $entry-title-color: #2a2647;
 $entry-meta-color: #ababab;
+$entry-hover-icon: "../images/entry-hover-icon.png";
 
 .sidebar  {
     //max-width: rem-calc(345);
@@ -28,6 +29,7 @@ $entry-meta-color: #ababab;
     display: block;
     background-color: $entry-bg;
     border-right: 1px solid #a0a0a0;
+    img { margin: 0 auto; }
 }
 
 .entry {
@@ -46,7 +48,7 @@ $entry-meta-color: #ababab;
         right: 8px;
         width: 6px;
         height: 17px;
-        background: url(../images/entry-hover-icon.png) 0 0 no-repeat;
+        background: url(#{$entry-hover-icon}) 0 0 no-repeat;
         opacity: 0;
         -webkit-transform: translate(100px, -50%);
         transform: translate(100px, -50%);

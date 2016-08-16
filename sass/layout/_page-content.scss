@@ -1,6 +1,7 @@
 $section-message-bg: #2a2647;
 
 .row {
+    // remove padding for custom columns
     &.padding-off {
         margin-left: 0;
         margin-right: 0;
@@ -22,9 +23,17 @@ $section-message-bg: #2a2647;
         background-color: #2a2647;
         content: "";
     }
-
+    // Custom container
     .container {
-        width: 1140px;
+        @media (min-width: 768px) {
+            width: 750px;
+        }
+        @media (min-width: 992px) {
+            width: 970px;
+        }
+        @media (min-width: 1200px) {
+            width: 1140px;
+        }
     }
 }
 
@@ -89,9 +98,8 @@ $section-message-bg: #2a2647;
 
 .section-gallery {
     padding: rem-calc(45 0 80);
-    [class*="col-"] {
-        padding: rem-calc(0 5);
-    }
+    // remove padding for custom columns
+    [class*="col-"] { padding: rem-calc(0 5); }
 
     .gallery-title {
         font-size: rem-calc(48);
@@ -118,7 +126,7 @@ $section-message-bg: #2a2647;
             pointer-events: none;
             -webkit-transform: scale(1.1);
             transform: scale(1.1);
-            transition: all .35s;
+            transition: all .35s ease-out;
         }
         &:hover:before {
             opacity: 1;

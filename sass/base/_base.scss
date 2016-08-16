@@ -16,3 +16,14 @@ img {
     max-width: 100%;
     margin: 0;
 }
+
+%clearfix {
+    &:before,
+    &:after {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
