@@ -1,120 +1,121 @@
 $btn-border-color: #32004b;
 $btn-text-color: #250e38;
 .left {
-  float: left;
+    float: left;
 }
 
 .right {
-  float: right;
-}
-.align-right {
-  @extend %clearfix;
-  & > * {
     float: right;
-  }
+}
+
+.align-right {
+    @extend %clearfix;
+    & > * {
+        float: right;
+    }
 }
 
 // Buttons
 .btn {
-  display: inline-block;
-  vertical-align: middle;
-  padding: rem-calc(8 20);
-  touch-action: manipulation;
-  cursor: pointer;
-  text-align: center;
-  font-family: $body-font-family;
-  font-weight: $font-bold;
-  color: $white;
-  background: transparent;
-  border-radius: 4px;
-  outline: none;
-  border: none;
-  -webkit-apperance: none;
-  -webkit-user-select: none;
-  user-select: none;
-  transition: all .35s;
-  &.btn-default {
-    width: 324px;
-    display: block;
-    margin: 25px auto 0;
-    background-color: transparent;
-    border: 1px solid $btn-border-color;
-    color: $btn-text-color;
-  }
-  &.btn-transparent {
-    min-width: 300px;
-    background-color: transparent;
-    border: 1px solid $white;
-    &:hover {
-      color: $main-color;
-      background-color: $white;
-    }
-  }
-  &.btn-submit {
-    position: relative;
-    min-width: rem-calc(220);
-    padding: rem-calc(10);
-    font-size: 20px;
-    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    padding: rem-calc(8 20);
+    touch-action: manipulation;
+    cursor: pointer;
+    text-align: center;
+    font-family: $body-font-family;
+    font-weight: $font-bold;
     color: $white;
-    background: $main-color;
-    border-radius: 0;
-    &:after {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 5px;
-        width: calc(100% - #{"10px"});
-        height: calc(100% - #{"10px"});
-        border: 1px solid $white;
-        background: transparent;
+    background: transparent;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    -webkit-apperance: none;
+    -webkit-user-select: none;
+    user-select: none;
+    transition: all .35s;
+    &.btn-default {
+        width: 324px;
+        display: block;
+        margin: 25px auto 0;
+        background-color: transparent;
+        border: 1px solid $btn-border-color;
+        color: $btn-text-color;
     }
-  }
+    &.btn-transparent {
+        min-width: 300px;
+        background-color: transparent;
+        border: 1px solid $white;
+        &:hover {
+            color: $main-color;
+            background-color: $white;
+        }
+    }
+    &.btn-submit {
+        position: relative;
+        min-width: rem-calc(220);
+        padding: rem-calc(10);
+        font-size: 20px;
+        text-transform: uppercase;
+        color: $white;
+        background: $main-color;
+        border-radius: 0;
+        &:after {
+            content: "";
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: calc(100% - #{"10px"});
+            height: calc(100% - #{"10px"});
+            border: 1px solid $white;
+            background: transparent;
+        }
+    }
 }
 
 // Links
 a {
-  color: inherit;
-  text-decoration: none;
-  transition: color .3s;
-  &:hover {
+    color: inherit;
     text-decoration: none;
-    color: $main-color;
-  }
+    transition: color .3s;
+    &:hover {
+        text-decoration: none;
+        color: $main-color;
+    }
 }
 
 .form-control {
-  display: block;
-  width: 100%;
-  height: 46px;
-  padding: 10px 10px;
-  border: none;
-  font-size: 20px;
-  color: #848484;
-  background-color: #ececec;
-  outline: none;
-  line-height: 27px;
-  border-radius: none;
-  -webkit-appearance: none;
-  ::-webkit-input-placeholder {
+    display: block;
+    width: 100%;
+    height: 46px;
+    padding: 10px 10px;
+    border: none;
+    font-size: 20px;
     color: #848484;
-    //opacity: 1;
-  }
-  :-moz-placeholder {
-    color: #848484;
-    //opacity: 1;
-  }
-  ::-moz-placeholder {
-    color: #848484;
-    //opacity: 1;
-  }
-  :-ms-input-placeholder {
-    color: #848484;
-    opacity: 1;
-  }
-  &.description {
-    height: 127px;
-  }
+    background-color: #ececec;
+    outline: none;
+    line-height: 27px;
+    border-radius: none;
+    -webkit-appearance: none;
+    ::-webkit-input-placeholder {
+        color: #848484;
+        //opacity: 1;
+    }
+    :-moz-placeholder {
+        color: #848484;
+        //opacity: 1;
+    }
+    ::-moz-placeholder {
+        color: #848484;
+        //opacity: 1;
+    }
+    :-ms-input-placeholder {
+        color: #848484;
+        opacity: 1;
+    }
+    &.description {
+        height: 127px;
+    }
 }
 
 .select-form-control {
@@ -138,127 +139,127 @@ a {
 
 // Search Block
 .search-wrapper {
-  position: relative;
-  margin: rem-calc(40 0);
-  text-align: right;
-  p { margin: 0; }
-  input[type="text"] {
-    width: 0;
-    height: 35px;
-    padding: 8px 3px;
-    font-size: 12px;
-    outline: none;
-    display: none;
-  }
-  .submit-search {
-    display: inline-block;
-    vertical-align: middle;
     position: relative;
-    text-align: center;
-    z-index: 3;
-    right: 0;
-    width: 36px;
-    height: 36px;
-    border-radius: 4px;
-    font: 0/0 a;
-    border: none;
-    background: $white;
-    transition: all .35s;
-    &:after {
-      content: '\e802';
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 4;
-      width: 100%;
-      height: 100%;
-      font-size: rem-calc(30);
-      font-family: 'fontello';
-      line-height: 35px;
-      color: #250e38;
-      transition: all .35s;
+    margin: rem-calc(39 0);
+    text-align: right;
+    p { margin: 0; }
+    input[type="text"] {
+        width: 0;
+        height: 35px;
+        padding: rem-calc(8 3);
+        font-size: rem-calc(12);
+        outline: none;
+        display: none;
     }
-  }
+    .submit-search {
+        display: inline-block;
+        vertical-align: middle;
+        position: relative;
+        text-align: center;
+        z-index: 3;
+        right: 0;
+        width: 36px;
+        height: 36px;
+        border-radius: 4px;
+        font: 0/0 a;
+        border: none;
+        background: $white;
+        transition: all .35s;
+        &:after {
+            content: '\e802';
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 4;
+            width: 100%;
+            height: 100%;
+            font-size: rem-calc(30);
+            font-family: 'fontello';
+            line-height: 35px;
+            color: #250e38;
+            transition: all .35s;
+        }
+    }
 }
 
 // Social Icons
 $soc-icon-size: 37;
 .social-share {
-  position: absolute;
-  top: 0;
-  left: rem-calc(40);
-  display: block;
-  margin: auto;
-  font-size: 0;
-  text-align: center;
-  width: rem-calc(70);
-  float: left;
-  .share-title {
+    position: absolute;
+    top: 0;
+    left: rem-calc(40);
     display: block;
-    margin-bottom: rem-calc(13);
-    font-size: rem-calc(13);
-    color: #474747;
+    margin: auto;
+    font-size: 0;
     text-align: center;
-    border-bottom: 1px solid #cbcbcb;
-  }
-  li {
-    display: block;
-    margin: 0 auto 5px;
-    width: rem-calc($soc-icon-size);
-    height: rem-calc($soc-icon-size);
-    line-height: rem-calc($soc-icon-size);
-    text-align: center;
-    a {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 100%;
-      color: $white;
-      &:before {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        background: transparent;
-        font-family: $fontello;
-        font-size: rem-calc(22);
-        transition: all .35s;
-      }
-      &.facebook:before {
-        content: '\f09a';
-      }
-      &.twitter:before {
-        content: '\f309';
-      }
-      &.google:before {
-        content: '\e800';
-      }
-      &.mail:before {
-        content: '\e801';
-      }
-      &.facebook:before {
-        background-color: $facebook;
-      }
-      &.twitter:before {
-        background-color: $twitter;
-      }
-      &.google:before {
-        background-color: $google;
-      }
-      &.mail:before {
-        background-color: $mail;
-      }
-      // &:hover {
-      //     &:before { color: $white; }
-      //     &.facebook:before { background-color: $facebook; }
-      //     &.twitter:before { background-color: $twitter; }
-      //     &.youtube:before { background-color: $youtube; }
-      //     &.google:before { background-color: $google; }
-      // }
+    width: rem-calc(70);
+    float: left;
+    .share-title {
+        display: block;
+        margin-bottom: rem-calc(13);
+        font-size: rem-calc(13);
+        color: #474747;
+        text-align: center;
+        border-bottom: 1px solid #cbcbcb;
     }
-  }
+    li {
+        display: block;
+        margin: 0 auto 5px;
+        width: rem-calc($soc-icon-size);
+        height: rem-calc($soc-icon-size);
+        line-height: rem-calc($soc-icon-size);
+        text-align: center;
+        a {
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: $white;
+            &:before {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                width: 100%;
+                height: 100%;
+                background: transparent;
+                font-family: $fontello;
+                font-size: rem-calc(22);
+                transition: all .35s;
+            }
+            &.facebook:before {
+                content: '\f09a';
+            }
+            &.twitter:before {
+                content: '\f309';
+            }
+            &.google:before {
+                content: '\e800';
+            }
+            &.mail:before {
+                content: '\e801';
+            }
+            &.facebook:before {
+                background-color: $facebook;
+            }
+            &.twitter:before {
+                background-color: $twitter;
+            }
+            &.google:before {
+                background-color: $google;
+            }
+            &.mail:before {
+                background-color: $mail;
+            }
+            // &:hover {
+            //     &:before { color: $white; }
+            //     &.facebook:before { background-color: $facebook; }
+            //     &.twitter:before { background-color: $twitter; }
+            //     &.youtube:before { background-color: $youtube; }
+            //     &.google:before { background-color: $google; }
+            // }
+        }
+    }
 }
 
 //.back-to-top {
