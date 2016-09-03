@@ -26,6 +26,11 @@ $submenu-item-bg-color-hover: #2a2647;
             color: $white;
             transition: all .35s ease-in-out;
             #{".footer"} & { padding: rem-calc(35 17); }
+            // Media query
+            @media (#{$tablet-view}) {
+                padding: rem-calc(35 7);
+            }
+
         }
         &:hover > a,
         &.current-menu-item > a {

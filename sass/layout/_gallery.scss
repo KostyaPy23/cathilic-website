@@ -1,0 +1,57 @@
+// Gallery Section
+/*
+    Styles for section that contains gallery and gallery items
+*/
+.section-gallery {
+    padding: rem-calc(45 0 80);
+
+    // remove padding for custom columns
+    [class*="col-"] { padding: rem-calc(0 5); }
+
+    .gallery-title {
+        font-size: rem-calc(48);
+        font-weight: $font-bold;
+        color: $main-color;
+    }
+
+    .gallery-item {
+        position: relative;
+        min-height: rem-calc(395);
+        margin-bottom: rem-calc(11);
+        text-align: center;
+        &:before {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid $white;
+            content: "";
+            opacity: 0;
+            will-change: -webkit-transform;
+            will-change: transform;
+            pointer-events: none;
+            -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+            transition: all .35s ease-out;
+        }
+        &:hover:before {
+            opacity: 1;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+        img { width: 100%; }
+        &.fixed-height { min-height: rem-calc(190); }
+        .gallery-caption {
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: rem-calc(44);
+            color: $white;
+            font-weight: $font-bold;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+        }
+    }
+}
